@@ -8,12 +8,13 @@ public class messageList {
 
     public void add(Message m)
     {
-        a.add(m);
+        a.add(0, m);
     }
 
-    public void move(int position, Message m)
+    public void move(int position, messageList from, messageList to)
     {
-
+        to.add((Message)from.a.get(position));
+        from.a.remove(position);
     }
 
 }
